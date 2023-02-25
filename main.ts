@@ -76,7 +76,7 @@ basic.forever(function () {
             `)
         basic.pause(50)
         basic.clearScreen()
-    } else if (KSB045.getJoystickValue(KSB045.valueType.X) > 520 && KSB045.getJoystickValue(KSB045.valueType.Y) >= 400 && KSB045.getJoystickValue(KSB045.valueType.Y) < 600) {
+    } else if (KSB045.getJoystickValue(KSB045.valueType.X) > 530 && KSB045.getJoystickValue(KSB045.valueType.Y) >= 400 && KSB045.getJoystickValue(KSB045.valueType.Y) < 600) {
         radio.sendNumber(6)
         basic.showLeds(`
             # . . . .
