@@ -10,30 +10,6 @@ KSB045.onBtnChanged(KSB045.btnName.C, KSB045.pushType.down, function () {
     basic.pause(50)
     basic.clearScreen()
 })
-function BUTd () {
-    radio.sendNumber(9)
-    basic.showLeds(`
-        . . # . .
-        . . . # .
-        . . . . #
-        . . . # .
-        . . # . .
-        `)
-    basic.pause(50)
-    basic.clearScreen()
-}
-function BUTf () {
-    radio.sendNumber(7)
-    basic.showLeds(`
-        . . # . .
-        . # . . .
-        # . . . .
-        . # . . .
-        . . # . .
-        `)
-    basic.pause(50)
-    basic.clearScreen()
-}
 KSB045.onBtnChanged(KSB045.btnName.E, KSB045.pushType.down, function () {
     radio.sendNumber(1)
     basic.showLeds(`
@@ -97,9 +73,27 @@ basic.forever(function () {
         basic.pause(50)
         basic.clearScreen()
     } else if (KSB045.getBtnValue(KSB045.btnName.F)) {
-        BUTf()
+        radio.sendNumber(7)
+        basic.showLeds(`
+            . . # . .
+            . # . . .
+            # . . . .
+            . # . . .
+            . . # . .
+            `)
+        basic.pause(50)
+        basic.clearScreen()
     } else if (KSB045.getBtnValue(KSB045.btnName.D)) {
-        BUTd()
+        radio.sendNumber(9)
+        basic.showLeds(`
+            . . # . .
+            . . . # .
+            . . . . #
+            . . . # .
+            . . # . .
+            `)
+        basic.pause(50)
+        basic.clearScreen()
     } else {
         radio.sendNumber(0)
     }
